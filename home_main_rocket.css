@@ -29,26 +29,26 @@
         from {}
 
         to {
-            transform: translate(-64px, 255px);
+            transform: translate(-45px, 259px);
             opacity: 0;
         }
     }
 
     @keyframes fire_flame {
         0%{
-            transform: translate(-64px,-25px) scaleY(0.05);
+            transform: translate(-45px,-10px) scaleY(0.05);
         }
         25%{
-            transform: translate(-64px,-25px) scaleY(0.1);
+            transform: translate(-45px,-8px) scaleY(0.1);
         }
         50%{
-            transform: translate(-64px,-18px) scaleY(0.2);
+            transform: translate(-45px,-4px) scaleY(0.2);
         }
         75%{
-            transform: translate(-64px,23px) scaleY(1) scaleX(1.5);
+            transform: translate(-45px,42px) scaleY(1.5) scaleX(2);
         }
         100%{
-            transform: translate(-64px,20px) ;
+            transform: translate(-45px,24px);
         }
     }
 
@@ -124,17 +124,19 @@
 
 
     .home_main_flame {
-        width: 130px;
+        width: 90px;
         /* height: 139px; */
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-64px, 20px);
+        transform: translate(-45px, 24px);
         padding: 0;
         z-index: -1;
         display: none;
         
     }
+
+
 }
 
 

@@ -10,9 +10,11 @@ setInterval(function(){
     var tmp = time % 6+1;
     document.getElementById("flame1").src="image/Flame/stage1/"+tmp+".png";
     document.getElementById("flame2").src="image/Flame/stage2/"+tmp+".png";
-    tmp = tmp%4+1;
-    document.getElementById("flame3").src="image/Flame/stage3/"+tmp+".png";
-},100);
+    if (time%2 === 0){
+        tmp = (time/2)%4+1;
+        document.getElementById("flame3").src="image/Flame/stage3/"+tmp+".png";
+    }
+},50);
 
 window.onscroll = function () {
     var dis=document.documentElement.scrollTop || document.body.scrollTop;
