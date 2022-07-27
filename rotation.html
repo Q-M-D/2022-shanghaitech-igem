@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="rotation.css">
+    <link rel="stylesheet" href="init.css">
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div >
+        <div class="rotation">
+            <div class="rotation_loc">
+                <div class="yplanet"><img src="image/yplanet.jpg" alt=""></div>
+                <div class="gplanet"><img src="image/gplanet.jpg" alt=""></div>
+                <div class="bplanet"><img src="image/bplanet.jpg" alt=""></div>
+                <svg class="gtrack">
+                    <ellipse class="g_track" cx="0" cy="0" rx="500" ry="200" style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
+                </svg>
+                <svg class="btrack">
+                    <ellipse class="b_track" cx="0" cy="0" rx="400" ry="150" style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
+                </svg>
+                <div class="planet_message">
+                    I am planet 1
+                </div>
+                <div class="planet_message">
+                    I am planet 2
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="rotation.js"></script>
+</body>
+
+</html>
