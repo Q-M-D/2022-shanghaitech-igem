@@ -29,8 +29,26 @@
         from {}
 
         to {
-            transform: translate(-90px, 237px);
+            transform: translate(-64px, 255px);
             opacity: 0;
+        }
+    }
+
+    @keyframes fire_flame {
+        0%{
+            transform: translate(-64px,-25px) scaleY(0.05);
+        }
+        25%{
+            transform: translate(-64px,-25px) scaleY(0.1);
+        }
+        50%{
+            transform: translate(-64px,-18px) scaleY(0.2);
+        }
+        75%{
+            transform: translate(-64px,23px) scaleY(1) scaleX(1.5);
+        }
+        100%{
+            transform: translate(-64px,20px) ;
         }
     }
 
@@ -93,29 +111,29 @@
 
     .home_main_flame1,
     .home_main_flame2 {
-        width: 169px;
-        height: 126px;
+        width: 116px;
+        /* height: 150px; */
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-78.5px, -56px);
+        transform: translate(-58px, -52px);
         padding: 0;
         z-index: -1;
-        opacity: 0.8;
         display: none;
     }
 
 
     .home_main_flame {
-        width: 185px;
-        height: 139px;
+        width: 130px;
+        /* height: 139px; */
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-90px, 2px);
+        transform: translate(-64px, 20px);
         padding: 0;
         z-index: -1;
         display: none;
+        
     }
 }
 
