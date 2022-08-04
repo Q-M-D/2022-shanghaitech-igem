@@ -1,0 +1,147 @@
+* {
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 100%窗口高度 */
+    /* height: 100vh; */
+    /* 弹性布局 居中 */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #e0e4ea;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    /* 固定定位 */
+    position: fixed;
+    text-align: end;
+    flex-direction:column-reverse;
+    width: 100vw;
+    height: 100vh;
+    right: -100vw;
+}
+
+
+.menus {
+    position:absolute;
+    right: 0px;
+    width: 300px;
+    height: 100vh;
+    padding: 25px 17px 0 0;
+    overflow: overlay;
+    color: #fff;
+    background-color: #989b9d;
+}
+
+.menus::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    color: transparent;
+}
+
+.li {
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 0;
+    transition: 0.3s;
+}
+
+.menus li:hover {
+    background-color: #676769;
+}
+
+.li .fa {
+    font-size: 20px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.li ul {
+    width: 0;
+    height: 100vh;
+    padding: 84px 0 0 0;
+    background-color: #99a3aa;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: overlay;
+    transition: 0.3s;
+}
+
+.li ul::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    color: transparent;
+}
+
+.li ul li {
+    padding: 16px 24px;
+    /* 文字禁止换行 */
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.li:hover ul {
+    width: 233px;
+}
+
+.li ul li:hover {
+    background-color: #4d525a;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: skyblue;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.navbar:hover i {
+    color: white;
+    transition: 0.3s;
+}
+
+@keyframes navbar-show {
+    0% {
+        right: -300px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes navbar-hidden {
+    0% {
+        right: 0px;
+    }
+
+    99%{
+        right: -300px;
+    }
+
+    100% {
+        right: -100vw;
+    }
+}
