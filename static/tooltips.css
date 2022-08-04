@@ -1,0 +1,220 @@
+/*1global*/
+html {
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #47c9cf;
+    color: #74777b;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: "Raleway", "Arail";
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:link,
+a:visited,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+*,
+*:after,
+*:before {
+    /*2不希望之前添加的或者之后添加的属性类似margin,padding之类的东西改变我们盒子的大小*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:after,
+*:before {
+    /*3希望添加的都是块元素并且内容都为空*/
+    display: block;
+    content: "";
+}
+
+*:after {
+    /*4在after上清除浮动*/
+    clear: both;
+}
+
+
+/*5Navaitor*/
+.nav {
+    width: 1000px;
+    height: 300px;
+    margin: 200px auto;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.tooltip {
+    display: inline-block;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    /*黑色*/
+    padding: 0.15em 0.25em 0;
+    /*6定位*/
+    position: relative;
+    z-index: 999;
+
+    /*15字体滑过的时候颜色由黑色像白色过渡的效果*/
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+/*15设置字体滑过的颜色变化*/
+.tooltip:hover {
+    color: rgba(255, 255, 255, 1);
+    /*白色*/
+}
+
+/*气泡*/
+.tooltip-content {
+    /*6定位*/
+    position: absolute;
+    z-index: 9999;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    /*6调整气泡的位置*/
+    left: 50%;
+    margin-left: -40px;
+    bottom: 100%;
+    margin-bottom: 20px;
+
+    /*7定义小图标在圆形的正中间*/
+    text-align: center;
+    padding-top: 25px;
+    color: #47c9cf;
+
+    opacity: 0;
+    /* 10 初始状态下气泡默认看不见*/
+
+    /* 12 因为你要过渡opacity属性,要让鼠标滑过时opacity变为1,就要在设置了opacity的.tooltip-content里面设置-webkit-transition*/
+    /*transition属性其中的两个参数:规定设置过渡效果的CSS属性的名称||规定完成过渡效果需要的时间*/
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    /*14这里transition要过渡transform属性，transition过渡多个属性用逗号隔开*/
+
+}
+
+.tooltip .tooltip-content i {
+    opacity: 0;
+    /* 10 初始状态下小图标默认看不见*/
+
+    /*12*/
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/*8调整下尖角的位置*/
+.tooltip-content::after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 20px;
+    background: #FF0000;
+    background: url(../img/tooltip1.svg) no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: -7px 0 0 -15px;
+}
+
+/*9给气泡和小图标设置transform属性*/
+.tooltip-effect_1 .tooltip-content {
+    /*transform属性的了其中两个参数平移和旋转:translate3d(0,10px,0)里面定义x,y,z轴方向上对象的3D 平移,参数为XXpx，translate3d(0,10px,0)等价于translateY(10px)*/
+    /*                                      rotate3d(1,1,1,45deg)里面定义x,y,z轴方向上的3d旋转角度,前三个参数的取值为0到1,表示在x,y,z方向旋转系数.为0表示在该轴上不旋转*/
+    -webkit-transform: translate3d(0, 10px, 0) rotate3d(1, 1, 1, 45deg);
+    transform: translate3d(0, 10px, 0) rotate3d(1, 1, 1, 45deg);
+
+    /*定义旋转中心点:transform-origin这个属性只有在定义了transform属性后才能生效*/
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+.tooltip-effect_1 .tooltip-content i {
+    /*transform属性的缩放参数:scale3d(0,0,1)里面定义x,y,z轴方向上的缩放系数，1代表不缩放*/
+    -webkit-transform: scale3d(0.1, 0.1, 1);
+    transform: scale3d(0.1, 0.1, 1);
+}
+
+/*16同理的设置其他a标签*/
+.tooltip-effect_2 .tooltip-content {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+
+.tooltip-effect_2 .tooltip-content i {
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+}
+
+.tooltip-effect_3 .tooltip-content {
+    -webkit-transform: translate3d(0, 10px, 0) rotate3d(0, 1, 0, 90deg);
+    transform: translate3d(0, 10px, 0) rotate3d(0, 1, 0, 90deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+.tooltip-effect_3 .tooltip-content i {
+    -webkit-transform: scale3d(0.1, 0.1, 1);
+    transform: scale3d(0.1, 0.1, 1);
+}
+
+.tooltip-effect_4 .tooltip-content {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+}
+
+.tooltip-effect_4 .tooltip-content i {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+
+.tooltip-effect_5 .tooltip-content {
+    -webkit-transform: scale3d(0.1, 0.1, 1);
+    transform: scale3d(0.1, 0.1, 1);
+}
+
+.tooltip-effect_5 .tooltip-content i {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+
+
+/*11 滑过时显示气泡和小图标*/
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i {
+    opacity: 1;
+    /*设置鼠标滑过后的气泡和小图标显示*/
+
+    /*13设置鼠标滑过的时候不管旋转或者缩放 了多少,现在都不要变化了*/
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0) scale3d(1, 1, 1);
+}

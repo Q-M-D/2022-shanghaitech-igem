@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="rotation.css">
-    <link rel="stylesheet" href="init.css">
+    <link rel="stylesheet" type="text/css" href="static/rotation.css">
+    <link rel="stylesheet" href="static/init.css">
+    <link rel="shortcut icon" href="image/logo.svg" />
     <style>
         body {
             height: 100%;
@@ -18,17 +19,23 @@
 </head>
 
 <body>
-    <div >
+    <div style="width:100vw;height:100vh;">
+        <div style="float: left;width:50%;height:100%;background-color: #0c1629;">
+            <img style="width: 800px;height: auto;position:relative;top: 50%;left: 50%; transform:translate(-50%,-50%);"
+                src="image/logo.svg" alt="">
+        </div>
         <div class="rotation">
             <div class="rotation_loc">
-                <div class="yplanet"><img src="image/yplanet.jpg" alt=""></div>
-                <div class="gplanet"><img src="image/gplanet.jpg" alt=""></div>
-                <div class="bplanet"><img src="image/bplanet.jpg" alt=""></div>
+                <div class="yplanet"><img src="image/yplanet1.jpg" alt=""></div>
+                <div class="gplanet"><img src="image/gplanet1.jpg" alt=""></div>
+                <div class="bplanet"><img src="image/bplanet1.jpg" alt=""></div>
                 <svg class="gtrack">
-                    <ellipse class="g_track" cx="0" cy="0" rx="500" ry="200" style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
+                    <ellipse class="g_track" cx="0" cy="0" rx="400" ry="400"
+                        style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
                 </svg>
                 <svg class="btrack">
-                    <ellipse class="b_track" cx="0" cy="0" rx="400" ry="150" style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
+                    <ellipse class="b_track" cx="0" cy="0" rx="250" ry="250"
+                        style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
                 </svg>
                 <div class="planet_message">
                     I am planet 1
@@ -38,9 +45,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <script type="text/javascript" src="rotation.js"></script>
+    <script type="text/javascript" src="static/rotation.js"></script>
 </body>
 
 </html>

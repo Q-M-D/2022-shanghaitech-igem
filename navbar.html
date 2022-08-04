@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>侧边导航栏</title>
+    <!-- 引入字体图标 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        .box1,
+        .box3,
+        .box5,
+        .box7,
+        .box9 {
+            height: 20vh;
+            width: 20vh;
+            background-color: aqua;
+        }
+
+        .box2,
+        .box4,
+        .box6,
+        .box8,
+        .box10 {
+            height: 20vh;
+            width: 20vh;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menus">
+            <li class="li">
+                <a href="{{ url_for('index') }}">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    Home
+                </a>
+            </li>
+            <li class="li">
+                <i class="fa fa-check-square" aria-hidden="true"></i>
+                Team
+                <ul>
+                    <li><a href="{{ url_for('pages', page='team') }}">Team</a></li>
+                    <li><a href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+                    <li><a href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
+                </ul>
+            </li>
+            <li class="li">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                Project
+                <ul>
+                    <li><a href="{{ url_for('pages', page='communication') }}">Communication</a></li>
+                    <li><a href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+                    <li><a href="{{ url_for('pages', page='description') }}">Description</a></li>
+                    <li><a href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+                    <li><a href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+                    <li><a href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
+                    <li><a href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+                    <li><a href="{{ url_for('pages', page='partnership') }}">Partnership</a></li>
+                    <li><a href="{{ url_for('pages', page='proof-of-concept') }}">Proof of Concept</a></li>
+                    <li><a href="{{ url_for('pages', page='results') }}">Results</a></li>
+                </ul>
+            </li>
+            <li class="li">
+                <i class="fa fa-tags" aria-hidden="true"></i>
+                Parts
+                <ul>
+                    <li><a href="{{ url_for('pages', page='part-collection') }}">Part Collection</a></li>
+                    <li><a href="{{ url_for('pages', page='parts') }}">Parts</a></li>
+                    <li><a href="{{ url_for('pages', page='improve') }}">Improve</a></li>
+                </ul>
+            </li>
+            <li class="li">
+                <a href="{{ url_for('pages', page='safety') }}">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    Safety
+                </a>
+            </li>
+            <li class="li">
+                <a href="{{ url_for('pages', page='human-practices') }}">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    Human Practices
+                </a>
+            </li>
+            <li class="li">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                Awards
+                <ul>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
+                    <li><a class="dropdown-item"
+                            href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='measurement') }}">Measurement</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='plant') }}">Plant</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainable</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+</body>
+
+</html>

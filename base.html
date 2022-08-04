@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .block1,
+        .block2 {
+            height: 100vh;
+            width: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .block1 {
+            background-color: aqua;
+        }
+
+        .block2 {
+            background-color: aquamarine;
+        }
+
+        .base {
+            margin: auto auto;
+            width: 400px;
+            height: 400px;
+            background-color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: skyblue;
+        }
+
+        .base-div {
+            height: 30%;
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+
+        @keyframes base-div-hover {
+            0% {}
+
+            100% {
+                transform: translate(-3px, -3px);
+            }
+        }
+
+        .base-div:hover {
+            animation: base-div-hover 0.1s linear forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block1" id="1"></div>
+    <div class="block2" id="2"></div>
+    <div class="block1" id="3"></div>
+    <div class="block2" id="4"></div>
+    <div class="block1" id="5"></div>
+    <div class="block2" id="6"></div>
+    <div class="block1" style="height: auto;">
+        <div class="base">
+            <div class="base-div" style="background-color:antiquewhite;"><a href="#1">one</a></div>
+            <div class="base-div" style="background-color:rgb(147, 135, 216);"><a href="#2">two</a></div>
+            <div class="base-div" style="background-color:blueviolet;"><a href="#3">three</a></div>
+            <div class="base-div" style="background-color:violet;"><a href="#4">four</a></div>
+            <div class="base-div" style="background-color:turquoise;"><a href="#5">five</a></div>
+            <div class="base-div" style="background-color:springgreen;"><a href="#6">six</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -7,7 +7,7 @@ body{
     /* 100%窗口高度 */
     height: 100vh;
     /* 弹性布局 居中 */
-    display: flex;
+    /* display: flex; */
     /* justify-content: center; */
     align-items: center;
     background-color: #e0e4ea;
@@ -20,6 +20,7 @@ nav{
     position: fixed;
     width: 300px;
     height: 100vh;
+    /* right: 0px; */
     background-color: #989b9d;
 }
 .menus{
@@ -66,4 +67,9 @@ nav{
 }
 .li ul li:hover{
     background-color: #4d525a;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
 }
