@@ -27,6 +27,8 @@ window.onscroll = function () {
         rocket[4].style.display = "block";
         rocket[5].style.display = "none";
         rocket[6].style.display = "none";
+        rocket[7].style.display = "none";
+        rocket[8].style.display = "none";
     }
     else if (dis >= 200 && dis < 400){
         rocket[0].style.display = "block";
@@ -36,6 +38,8 @@ window.onscroll = function () {
         rocket[4].style.display = "none";
         rocket[5].style.display = "block";
         rocket[6].style.display = "none";
+        rocket[7].style.display = "none";
+        rocket[8].style.display = "none";
     }
     else if (dis >= 400 && dis < 600){
         rocket[0].style.display = "none";
@@ -45,6 +49,8 @@ window.onscroll = function () {
         rocket[4].style.display = "none";
         rocket[5].style.display = "none";
         rocket[6].style.display = "block";
+        rocket[7].style.display = "block";
+        rocket[8].style.display = "block";
         rocket[1].style.animation = "rocket_wobble 0.1s linear 0s infinite";
         rocket[6].style.animation = "fire_flame 1s linear 0s forwards";
         rocket[2].style.animation = "rocket_up 3s ease forwards";
@@ -58,6 +64,8 @@ window.onscroll = function () {
         rocket[4].style.display = "none";
         rocket[5].style.display = "none";
         rocket[6].style.display = "block";
+        rocket[7].style.display = "none";
+        rocket[8].style.display = "none";
         rocket[1].style.animation = "rocket_to_land 3s ease forwards";
         rocket[6].style.animation = "rocket_to_land_flame 3s ease forwards";
     }

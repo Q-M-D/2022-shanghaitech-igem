@@ -1,0 +1,57 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    perspective: 1px;
+}
+
+.g-container {
+    position: relative;
+    transform-style: preserve-3d;
+    height: 280vw;
+    transform: translateY(280vw);
+}
+.section-one {
+    transform:translate3d(-45px,0vw,-2px) scale(3)
+}
+
+.foot-house{
+    width: 100vw;
+}
+
+
+.section-three {
+    z-index:-2;
+    transform:translate3d(-45px,0px,-3px) scale(4);
+}
+
+.foot-background{
+    width: 100vw;
+    z-index: 0;
+}
+
+.foot-buildings{
+    position: absolute;
+    width: 65vw;
+    right: 0px;
+    top: 4vw;
+    z-index: 2;
+}
+
+.landing-platform{
+    position: absolute;
+    width:30vw;
+    left: 5vw;
+    top: 18vw;
+    transform: translate(0px,0px);
+    z-index: 2;
+}
