@@ -1,69 +1,25 @@
-*{
-    /* 初始化 */
-    margin: 0;
-    padding: 0;
+body {
+    margin: 0px;
 }
-body{
-    /* 100%窗口高度 */
-    height: 100vh;
-    /* 弹性布局 居中 */
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    background-color: #e0e4ea;
-}
-ul{
-    list-style: none;
-}
-nav{
-    /* 固定定位 */
-    position: fixed;
-    width: 300px;
-    height: 100vh;
-    background-color: #989b9d;
-}
-.menus{
-    margin: 50px 0;
+
+.night {
+    background: #0A1931;
+    width: 100vw;
+    height: 150vh;
     color: #fff;
-}
-.li{
-    letter-spacing: 2px;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 16px 0;
-    /* 动画过渡 */
-    transition: 0.3s;
-}
-.menus li:hover{
-    background-color: #676769;
-}
-.li .fa{
-    font-size: 20px;
-    width: 50px;
-    height: 20px;
-    text-align: center;
-    margin-left: 5px;
-}
-.li ul{
-    width: 0;
-    height: 100vh;
-    padding: 50px 0;
-    background-color: #99a3aa;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     overflow: hidden;
-    transition: 0.3s;
 }
-.li ul li{
-    padding: 16px 24px;
-    /* 文字禁止换行 */
-    white-space: nowrap;
-    transition: 0.3s;
+
+.moon {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    font-size: 56px;
 }
-.li:hover ul{
-    width: 250px;
-}
-.li ul li:hover{
-    background-color: #4d525a;
+
+.star {
+    position: absolute;
+    bottom: -30px;
+    font-size: 24px;
 }
