@@ -134,7 +134,7 @@
     }
 
 
-    .planet_message {
+    /* .planet_message {
         width: 300px;
         height: 200px;
         position: absolute;
@@ -146,5 +146,5 @@
         border: 2px solid black;
         text-align: center;
         opacity: 0;
-    }
+    } */
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000vh;
+            margin: 0;
+
+        }
+
+        .bg2 {
+            height: 100vh;
+            width: 100vw;
+            background: url("image/bg2.jpg") repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .bg1 {
+            height: 100vh;
+            width: 100vw;
+            background: url("image/bg1.jpg") repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="width: 100vw;height: 100vh;">
+        <img src="image/bg2.jpg" style="position: absolute;width:100vw;height: 100vh;" alt=""> -->
+    </div> -->
+    <div class="bg" style="position:fixed">
+        <div class="bg1" id="bg1"></div>
+        <div class="bg2" id="bg2"></div>
+    </div>
+    <script>
+        var bg1 = document.getElementById("bg1");
+        var bg2 = document.getElementById("bg2");
+        window.onscroll = function () {
+            var dis=document.documentElement.scrollTop || document.body.scrollTop;
+            bg1.style.backgroundPositionY=-0.04*dis+"px";
+            bg2.style.backgroundPositionY=-0.1*dis+"px";
+            bg1.style.backgroundPositionX=-0.01*dis+"px";
+            bg2.style.backgroundPositionX=-0.01*dis+"px";
+        }
+    </script>
+</body>
+
+</html>

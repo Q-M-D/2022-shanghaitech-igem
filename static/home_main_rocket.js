@@ -2,10 +2,15 @@ var div_rocket = document.getElementsByClassName("home_main_rocket")[0];
 var rocket = div_rocket.getElementsByTagName("img");
 rocket[0].style.display = "block";
 rocket[4].style.display = "block";
+var foot_background = document.getElementById("foot-background");
+var foot_buildings = document.getElementById("foot-buildings");
+var landing_platform = document.getElementById("landing-platform");
+var foot_img = document.getElementById("foot-img");
+var bg1 = document.getElementById("bg1");
+var bg2 = document.getElementById("bg2");
 var time = 0;
 
-
-setInterval(function(){
+var rocket_flame_timer = setInterval(function(){
     time=time+1;
     var tmp = time % 6+1;
     document.getElementById("flame1").src="image/Flame/stage1/"+tmp+".png";
@@ -16,10 +21,28 @@ setInterval(function(){
     }
 },50);
 
+
 window.onscroll = function () {
     var dis=document.documentElement.scrollTop || document.body.scrollTop;
-    // console.log(dis);
-    if (dis < 200){
+    var foot_dis = foot_img.getBoundingClientRect().top;
+    var rocket_dis = div_rocket.offsetTop;
+    console.log(rocket_dis);
+    console.log(landing_platform.offsetTop);
+
+    bg1.style.backgroundPositionY=-0.04*dis+"px";
+    bg2.style.backgroundPositionY=-0.1*dis+"px";
+    bg1.style.backgroundPositionX=-0.01*dis+"px";
+    bg2.style.backgroundPositionX=-0.01*dis+"px";
+
+    foot_background.style.top = -0.4 * foot_dis + "px";
+    foot_buildings.style.top = -0.4 * foot_dis + 350 + "px";
+    landing_platform.style.top = -0.4 * foot_dis + 350 + "px";
+
+    bg1.style.backgroundPositionY = -0.04 * dis + "px";
+    bg2.style.backgroundPositionY = -0.1 * dis + "px";
+    bg1.style.backgroundPositionX = -0.01 * dis + "px";
+    bg2.style.backgroundPositionX = -0.01 * dis + "px";
+    if (dis < 2000){
         rocket[0].style.display = "block";
         rocket[1].style.display = "none";
         rocket[2].style.display = "none";
@@ -30,7 +53,7 @@ window.onscroll = function () {
         rocket[7].style.display = "none";
         rocket[8].style.display = "none";
     }
-    else if (dis >= 200 && dis < 400){
+    else if (dis >= 2000 && dis < 4000){
         rocket[0].style.display = "block";
         rocket[1].style.display = "none";
         rocket[2].style.display = "none";
@@ -41,7 +64,7 @@ window.onscroll = function () {
         rocket[7].style.display = "none";
         rocket[8].style.display = "none";
     }
-    else if (dis >= 400 && dis < 600){
+    else if (dis >= 4000 && dis < 6000){
         rocket[0].style.display = "none";
         rocket[1].style.display = "block";
         rocket[2].style.display = "block";
