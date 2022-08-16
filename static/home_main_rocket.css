@@ -1,4 +1,4 @@
-@media only screen and (min-width: 200px) {
+/* @media only screen and (min-width: 200px) { */
     @keyframes rocket_up {
         from {}
 
@@ -18,10 +18,13 @@
     }
 
     @keyframes rocket_to_land {
-        from {}
+        from {
+            position: fixed;
+        }
 
         to {
-            transform: translate(0, 200px);
+            /* transform: translate(0, 0px);
+            position: absolute; */
         }
     }
 
@@ -29,8 +32,9 @@
         from {}
 
         to {
-            transform: translate(-7px, 250px);
             opacity: 0;
+            /* position: absolute;
+            transform: translate(-7px, 50px); */
         }
     }
 
@@ -162,7 +166,7 @@
         display: none;
     }
 
-}
+/* } */
 
 
 /* @media only screen and (max-width: 767px) {

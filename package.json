@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "material-icons": "^1.11.9"
+    "animate.css": "^4.1.1",
+    "material-icons": "^1.11.9",
+    "wow.js": "^1.2.2"
   }
 }

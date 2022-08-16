@@ -6,45 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <style>
-        body{
-
+        html,
+        body {
+            margin: 0;
+            padding: 0;
         }
-        .parallax-window {
-            min-height: 1200px;
-            /* min-width: 100vw; */
-            /* background: transparent; */
+
+        .container {
+            position: relative;
+            flex: auto;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .container div {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: aqua;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin: 20px;
         }
     </style>
 </head>
 
 <body>
-    <!-- <div style="height:400px;width:400px;border-radius: 50%;background-color: black;"></div>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="image/home_foot_img/foot_background.png"></div>
-    <div class="parallax-window">
-        <div class="parallax-slider">
-            <span style="position:absolute; top: 800px; left: 400px;background-color: white;">Some Text</span>
-            <p>Some other Content</p>
-        </div>
+    <div class="container">
+        <div class="wow animate__bounceIn" data-wow-duration="2s" data-wow-delay="0s">1</div>
+        <div class="wow animate__shakeX" data-wow-duration="2s" data-wow-delay="0s">2</div>
+        <div class="wow animate__flash" data-wow-duration="2s" data-wow-delay="0s">3</div>
+        <div class="wow animate__rubberBand" data-wow-duration="2s" data-wow-delay="0s">4</div>
+        <div class="wow animate__shakeY" data-wow-duration="2s" data-wow-delay="0s">5</div>
+        <div class="wow animate__headShake" data-wow-duration="2s" data-wow-delay="0s">6</div>
+        <div class="wow animate__swing" data-wow-duration="2s" data-wow-delay="0s">7</div>
+        <div class="wow animate__tada" data-wow-duration="2s" data-wow-delay="0s">8</div>
+        <div class="wow animate__wobble" data-wow-duration="2s" data-wow-delay="0s">9</div>
+        <div class="wow animate__bounce" data-wow-duration="2s" data-wow-delay="0s">10</div>
+        <div class="wow animate__jello" data-wow-duration="2s" data-wow-delay="0s">11</div>
+        <div class="wow animate__heartBeat" data-wow-duration="2s" data-wow-delay="0s">12</div>
+        <div class="wow animate__backInDown" data-wow-duration="2s" data-wow-delay="0s">13</div>
+        <div class="wow animate__backInLeft" data-wow-duration="2s" data-wow-delay="0s">14</div>
+        <div class="wow animate__backInRight" data-wow-duration="2s" data-wow-delay="0s">15</div>
+        <div class="wow animate__backInUp" data-wow-duration="2s" data-wow-delay="0s">16</div>
+        <div class="wow animate__bounceIn" data-wow-duration="2s" data-wow-delay="0s">17</div>
+        <div class="wow animate__bounceInDown" data-wow-duration="2s" data-wow-delay="0s">18</div>
+        <div class="wow animate__bounceInLeft" data-wow-duration="2s" data-wow-delay="0s">19</div>
+        <div class="wow animate__bounceInRight" data-wow-duration="2s" data-wow-delay="0s">20</div>
+        <div class="wow animate__bounceInUp" data-wow-duration="2s" data-wow-delay="0s">21</div>
+        <div class="wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0s">22</div>
+        <div class="wow animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0s">23</div>
+        <div class="wow animate__fadeInDownBig" data-wow-duration="2s" data-wow-delay="0s">24</div>
+        <div class="wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0s">25</div>
+        <div class="wow animate__fadeInLeftBig" data-wow-duration="2s" data-wow-delay="0s">26</div>
+        <div class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s">27</div>
+        <div class="wow animate__fadeInRightBig" data-wow-duration="2s" data-wow-delay="0s">28</div>
+        <div class="wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0s">29</div>
+        <div class="wow animate__fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s">30</div>
+        <div class="wow animate__fadeInTopLeft" data-wow-duration="2s" data-wow-delay="0s">31</div>
+        <div class="wow animate__fadeInTopRight" data-wow-duration="2s" data-wow-delay="0s">32</div>
+        <div class="wow animate__fadeInBottomLeft" data-wow-duration="2s" data-wow-delay="0s">33</div>
+        <div class="wow animate__fadeInBottomRight" data-wow-duration="2s" data-wow-delay="0s">34</div>
+        <div class="wow animate__flip" data-wow-duration="2s" data-wow-delay="0s">35</div>
+        <div class="wow animate__flipInX" data-wow-duration="2s" data-wow-delay="0s">36</div>
+        <div class="wow animate__flipInY" data-wow-duration="2s" data-wow-delay="0s">37</div>
+        <div class="wow animate__flipOutX" data-wow-duration="2s" data-wow-delay="0s">38</div>
+        <div class="wow animate__flipOutY" data-wow-duration="2s" data-wow-delay="0s">39</div>
+        <div class="wow animate__lightSpeedInRight" data-wow-duration="2s" data-wow-delay="0s">40</div>
+        <div class="wow animate__lightSpeedInLeft" data-wow-duration="2s" data-wow-delay="0s">41</div>
+        <div class="wow animate__rotateIn" data-wow-duration="2s" data-wow-delay="0s">42</div>
+        <div class="wow animate__rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0s">43</div>
+        <div class="wow animate__rotateInDownRight" data-wow-duration="2s" data-wow-delay="0s">44</div>
+        <div class="wow animate__rotateInUpLeft" data-wow-duration="2s" data-wow-delay="0s">45</div>
+        <div class="wow animate__rotateInUpRight" data-wow-duration="2s" data-wow-delay="0s">46</div>
+        <div class="wow animate__hinge" data-wow-duration="2s" data-wow-delay="0s">47</div>
+        <div class="wow animate__jackInTheBox" data-wow-duration="2s" data-wow-delay="0s">48</div>
+        <div class="wow animate__rollIn" data-wow-duration="2s" data-wow-delay="0s">49</div>
+        <div class="wow animate__rollOut" data-wow-duration="2s" data-wow-delay="0s">50</div>
+        <div class="wow animate__zoomIn" data-wow-duration="2s" data-wow-delay="0s">51</div>
+        <div class="wow animate__zoomInLeft" data-wow-duration="2s" data-wow-delay="0s">52</div>
+        <div class="wow animate__zoomInRight" data-wow-duration="2s" data-wow-delay="0s">53</div>
+        <div class="wow animate__zoomInUp" data-wow-duration="2s" data-wow-delay="0s">54</div>
+        <div class="wow animate__slideInDown" data-wow-duration="2s" data-wow-delay="0s">55</div>
+        <div class="wow animate__slideInLeft" data-wow-duration="2s" data-wow-delay="0s">56</div>
+        <div class="wow animate__slideInRight" data-wow-duration="2s" data-wow-delay="0s">57</div>
+        <div class="wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0s">58</div>
     </div>
-    <div style="height:400px;width:400px;border-radius: 50%;background-color: black;"></div>
-    <div style="height:400px;width:400px;border-radius: 50%;background-color: black;"></div> -->
-    <!-- <div class="parallax-window">
-        <div class="parallax-slider">
-            <img src="image/home_foot_img/foot_background.png"
-                srcset="image/home_foot_img/foot_background.png 400w, image/home_foot_img/foot_background.png 800w, image/home_foot_img/foot_background.png 1200w"
-                sizes="100vw">
-        </div>
-    </div> -->
-    <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="image/bg1" style="height: ;"></div> -->
 
-    <script src="static/jquery.min.js"></script>
-    <script src="static/parallax.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script> -->
+    <script src="node_modules/wow.js/dist/wow.min.js"></script>
     <script>
-
-
+        new WOW().init();
     </script>
 </body>
 

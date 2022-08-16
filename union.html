@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="node_modules/material-icons/iconfont/material-icons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/home_main_rocket.css">
     <link rel="stylesheet" type="text/css" href="static/rotation.css">
     <link rel="stylesheet" href="static/init.css">
@@ -18,11 +17,13 @@
             overflow-x: hidden;
             /* height: 2000vh; */
         }
-        div{
+
+        div {
             margin: 0;
             padding: 0;
         }
-        p{
+
+        p {
             margin: 0;
             padding: 0;
         }
@@ -47,8 +48,8 @@
             z-index: -1;
         }
 
-        .test-box{
-            height: 400px;
+        .test-box {
+            height: 100vh;
             width: 100vw;
             z-index: 3;
         }
@@ -60,20 +61,9 @@
         <div class="bg1" id="bg1"></div>
         <div class="bg2" id="bg2"></div>
     </div>
-    <div class="home_main_rocket">
-        <img class="home_main_rocket_shell" src="image/shell.svg" alt="">
-        <img class="home_main_rocket_landing" src="image/飞船2.1.png" alt="">
-        <img class="home_main_rocket_up" src="image/shell_upper.svg" alt="">
-        <img class="home_main_rocket_low" src="image/shell_lower.svg" alt="">
-        <img class="home_main_flame1" id="flame1" src="image/Flame/stage1/1.png" alt="">
-        <img class="home_main_flame2" id="flame2" src="image/Flame/stage2/1.png" alt="">
-        <img class="home_main_flame" id="flame3" src="image/Flame/stage3/1.png" alt="">
-        <img class="home_main_flame_left" id="flame3" src="image/Flame/stage3/1.png" alt="">
-        <img class="home_main_flame_right" id="flame4" src="image/Flame/stage3/1.png" alt="">
-    </div>
     <div style="width:100vw;height:100vh;position: relative;z-index: 4;">
-        <div style="float: left;width:50%;height:100%;background-color: #0c1629;">
-            <img style="width: 40vw;height: auto;position:relative;top: 50%;left: 50%; transform:translate(-50%,-50%);"
+        <div style="float: left;width:40%;height:100%;background-color: #0c1629;">
+            <img style="width: 30vw;height: auto;position:relative;top: 50%;left: 50%; transform:translate(-50%,-50%);"
                 src="image/logo.svg" alt="">
         </div>
         <div class="rotation">
@@ -82,11 +72,11 @@
                 <div class="gplanet"><img src="image/gplanet1.jpg" alt=""></div>
                 <div class="bplanet"><img src="image/bplanet1.jpg" alt=""></div>
                 <svg class="gtrack">
-                    <ellipse class="g_track" cx="0" cy="0" rx="400" ry="400"
+                    <ellipse class="g_track" cx="0" cy="0" rx="350" ry="350"
                         style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
                 </svg>
                 <svg class="btrack">
-                    <ellipse class="b_track" cx="0" cy="0" rx="250" ry="250"
+                    <ellipse class="b_track" cx="0" cy="0" rx="200" ry="200"
                         style="stroke-dasharray: 10 0;fill:none; stroke-width: 1; stroke: white;; "></ellipse>
                 </svg>
                 <!-- <div class="planet_message">
@@ -97,83 +87,58 @@
                 </div> -->
             </div>
         </div>
+        <!-- <button style="position: absolute;bottom:0;left:50%;transform: translate(-50%,0);width: 200px;height: 200px;background-color: aquamarine;"></button> -->
     </div>
     <div>
-
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
-        <div class="test-box"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
+        <div class="test-box" style="height:100vh;width: 100vw;"></div>
     </div>
     <div class="index-foot">
         <div id="foot-img" style="position: relative;z-index: 0;">
             <img class="foot-background" src="image/home_foot_img/foot_background.png" alt=""
-            style="position:absolute;width: 100vw;height: auto;" id="foot-background">
+                style="position:absolute;width: 100vw;height: auto;" id="foot-background">
             <img class="foot-buildings" src="image/home_foot_img/foot_buildings.png" alt=""
-            style="position:absolute;width: 500px;top: 350px;right: 0;" id="foot-buildings">
+                style="position:absolute;width: 60vw;top: 50vh;right: 0;" id="foot-buildings">
             <img class="landing-platform" src="image/home_foot_img/landing_platform.png" alt=""
-            style="position:absolute;width: 300px;top: 350px;" id="landing-platform">
+                style="position:absolute;width: 300px;top: 50vh;transform: translate(0,-34px);" id="landing-platform">
+            <div class="home_main_rocket" style="position: relative;z-index:3;">
+                <img class="home_main_rocket_shell" src="image/shell.svg" alt="">
+                <img class="home_main_rocket_landing" src="image/landing.png" alt="">
+                <img class="home_main_rocket_up" src="image/shell_upper.svg" alt="">
+                <img class="home_main_rocket_low" src="image/shell_lower.svg" alt="">
+                <img class="home_main_flame1" id="flame1" src="image/Flame/stage1/1.png" alt="">
+                <img class="home_main_flame2" id="flame2" src="image/Flame/stage2/1.png" alt="">
+                <img class="home_main_flame" id="flame3" src="image/Flame/stage3/1.png" alt="">
+                <img class="home_main_flame_left" id="flame3" src="image/Flame/stage3/1.png" alt="">
+                <img class="home_main_flame_right" id="flame4" src="image/Flame/stage3/1.png" alt="">
+            </div>
         </div>
         <div style="position: relative;z-index: 5;">
             <img class="foot-house" src="image/home_foot_img/foot_house.png" alt=""
-            style="width: 100vw;position: relative;top: 0px;">
+                style="width: 100vw;position: relative;top: 0px;">
         </div>
     </div>
     <div class="row mt-4" style="background-color:black;color:white;z-index:20;display: block;">
-        
+
         <div class="col">
             <p class="mb-0"><small>© 2022 - Content on this site is licensed under a <a class="subfoot"
                         href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons
                         Attribution
                         4.0 International license</a>.</small></p>
-                        <p><small>The repository used to create this website is available at <a
-                            href="https://gitlab.igem.org/2022/shanghaitech-china">gitlab.igem.org/2022/shanghaitech-china</a>.</small>
-                        </p>
-                    </div>
-                </div>
+            <p><small>The repository used to create this website is available at <a
+                        href="https://gitlab.igem.org/2022/shanghaitech-china">gitlab.igem.org/2022/shanghaitech-china</a>.</small>
+            </p>
+        </div>
+    </div>
     <script type="text/javascript" src="static/home_main_rocket.js"></script>
     <script type="text/javascript" src="static/rotation.js"></script>
-    <!-- <script>
-        var foot_background = document.getElementById("foot-background");
-        var foot_buildings = document.getElementById("foot-buildings");
-        var landing_platform = document.getElementById("landing-platform");
-        var foot_img = document.getElementById("foot-img");
-        console.log(foot_background);
-        var bg1 = document.getElementById("bg1");
-        var bg2 = document.getElementById("bg2");
-        window.onscroll = function () {
-            var dis = document.documentElement.scrollTop || document.body.scrollTop;
-            var foot_dis = foot_img.getBoundingClientRect().top;
-            console.log(foot_dis);
-            console.log(dis);
-            foot_background.style.top = -0.4 * foot_dis + "px";
-            foot_buildings.style.top = -0.4 * foot_dis + 350 + "px";
-            landing_platform.style.top = -0.4 * foot_dis + 350 + "px";
-            // console.log(document.getElementsByTagName("img")[1].getBoundingClientRect().top);
-            // var dis = document.documentElement.scrollTop || document.body.scrollTop;
-            // console.log(dis);
-            // console.log(document.body.clientHeight);
-            // console.log(window.innerHeight);
-            bg1.style.backgroundPositionY = -0.04 * dis + "px";
-            bg2.style.backgroundPositionY = -0.1 * dis + "px";
-            bg1.style.backgroundPositionX = -0.01 * dis + "px";
-            bg2.style.backgroundPositionX = -0.01 * dis + "px";
-        }
-    </script> -->
 </body>
 
 </html>
